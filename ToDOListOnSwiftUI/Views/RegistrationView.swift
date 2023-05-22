@@ -8,19 +8,17 @@
 import SwiftUI
 
 struct RegistrationView: View {
-    @State var name: String = ""
-    @State var email: String = ""
-    @State var password: String = ""
+    @StateObject var viewModel = RegistrationViewViewModel()
     var body: some View {
         VStack {
             HeaderView(title: "Register", subtitle: "Enter your registration infos", color: .green)
             
             Form {
-                TextField("Full Name", text: $name)
-                TextField("Email Address", text: $email)
-                SecureField("Password", text: $password)
+                TextField("Full Name", text: $viewModel.name)
+                TextField("Email Address", text: $viewModel.email)
+                SecureField("Password", text: $viewModel.password)
                 TDLButton(title: "Create Account", color: .green, action: {
-                    //
+                    viewModel.register()
                 })
                 
 
