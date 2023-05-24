@@ -36,7 +36,7 @@ struct ToDoListView: View {
                             .tint(.red)
                         }
                 }
-                .listStyle(PlainListStyle())
+                .listStyle(.plain)
             }
             .navigationTitle("To do List")
             .toolbar {

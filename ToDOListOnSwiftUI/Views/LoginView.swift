@@ -23,8 +23,11 @@ struct LoginView: View {
                             .foregroundColor(Color.red)
                     }
                     TextField("Email", text: $viewModel.email)
+                        .autocorrectionDisabled()
+                        .autocapitalization(.none)
                     SecureField("Password", text: $viewModel.password)
-                    
+                        .autocorrectionDisabled()
+                        .autocapitalization(.none)
                     TDLButton(title: "Log in", color: .purple, action: {
                         viewModel.login() 
                     })

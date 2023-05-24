@@ -15,8 +15,14 @@ struct RegistrationView: View {
             
             Form {
                 TextField("Full Name", text: $viewModel.name)
+                    .autocorrectionDisabled()
+                    .autocapitalization(.none)
                 TextField("Email Address", text: $viewModel.email)
+                    .autocorrectionDisabled()
+                    .autocapitalization(.none)
                 SecureField("Password", text: $viewModel.password)
+                    .autocorrectionDisabled()
+                    .autocapitalization(.none)
                 TDLButton(title: "Create Account", color: .green, action: {
                     viewModel.register()
                 })
