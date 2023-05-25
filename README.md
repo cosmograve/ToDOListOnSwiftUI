@@ -1,4 +1,4 @@
-# ToDOListOnSwiftUI
+# To Do List On SwiftUI
 Instructions
 The project uses firebase storage. 
 First of all, you need to create a new project by following this link https://console.firebase.google.com/u/0/?hl=ru
